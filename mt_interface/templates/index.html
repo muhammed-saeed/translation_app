@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      .centered {
+        position: relative;
+        text-align: center;
+        display: grid;
+        place-items: center;
+        color: white;
+      }
+
+      .header {
+        color: black;
+      }
+
+      p {
+        color: #111;
+        font-family: 'Helvetica Neue', sans-serif;
+        font-size: 14px;
+        line-height: 24px;
+        margin: 0 0 24px;
+        text-justify: inter-word;
+      }
+
+      h1 {
+        color: #111;
+        font-family: 'Helvetica Neue', sans-serif;
+        font-size: 36px;
+        font-weight: bold;
+        letter-spacing: -1px;
+        line-height: 1;
+        text-align: center;
+      }
+
+      #demo {
+        color: #111;
+        font-family: 'Helvetica Neue', sans-serif;
+        font-size: 22px;
+        line-height: 24px;
+        margin: 0 0 24px;
+        text-justify: inter-word;
+      }
+
+      .form-div {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container mt-5">
+      <div class="centered">
+        <div class="text-center text-white">
+          <title>Machine Translation app</title>
+        </div>
+        <h1 class="header">Machine Translation App</h1>
+
+        <p class="desc">
+          Type a sentence, click on the submit button and wait for your prediction.
+        </p>
+
+        <form method="POST" onSubmit="return validate();" class="form">
+          <div class="form-div">
+            <textarea label="please type PCM text" type="text" name="text" id="text_id" value="dfd" class="form-control mr-2" rows="4" cols="50">
+
+            </textarea>
+            <br>
+            <br>
+            <input type="submit" value="Translate PCM to En">
+            <!-- <input type="text" name="text" id="text_id" value="dfd" class="form-control mr-2" />
+            <button type="submit" class="btn btn-outline-primary" onclick="this.form.submit();">
+              Submit
+            </button> -->
+          <!-- <div>
+
+          <div class="form-radio"> -->
+          
+          <!-- <input type="radio" id="EN-PCM" name="EN-PCM" value="EN-PCM">
+          <label for="EN-PCM">EN to PCM</label><br>
+          <input type="radio" id="PCM-EN" name="PCM-EN" value="PCM-EN">
+          <label for="PCM-EN">PCM to EN</label><br> -->
+          </div>
+        </form>
+
+        <br />
+        <br />
+
+        <p id="demo">{{ variable }}</p>
+      </div>
+    </div>
+  </body>
+</html>
+
+<script>
+  var val =  document.cookie.replace("last_value=","").replaceAll("\\342"," ").replaceAll("\\226"," ").replaceAll("\\201"," ")
+  document.getElementById("text_id").value = val
+</script>
