@@ -1,25 +1,27 @@
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
-import Notes from './pages/Notes'
-import Create from './pages/Create'
-import { createMuiTheme, ThemeProvider } from '@material-ui/core'
-import { purple } from '@material-ui/core/colors'
-import Layout from './components/Layout'
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import Notes from "./pages/Notes";
+import Create from "./pages/Create";
+import { createMuiTheme, ThemeProvider } from "@material-ui/core";
+import { purple } from "@material-ui/core/colors";
+import Layout from "./components/Layout";
+import { NoteFormProvider } from "./context/notes.context";
+import CreateNote from "./pages/CreateNote";
 
 const theme = createMuiTheme({
   palette: {
     primary: {
-      main: '#fefefe'
+      main: "#fefefe",
     },
-    secondary: purple
+    secondary: purple,
   },
   typography: {
-    fontFamily: 'Quicksand',
+    fontFamily: "Quicksand",
     fontWeightLight: 400,
     fontWeightRegular: 500,
     fontWeightMedium: 600,
     fontWeightBold: 700,
-  }
-})
+  },
+});
 
 function App() {
   return (
@@ -31,7 +33,9 @@ function App() {
               <Notes />
             </Route>
             <Route path="/create">
-              <Create />
+              <NoteFormProvider>
+                <CreateNote />
+              </NoteFormProvider>
             </Route>
           </Switch>
         </Layout>
