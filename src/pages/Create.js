@@ -90,7 +90,7 @@ export default function Create() {
           <RadioGroup value={category} onChange={(e) => setCategory(e.target.value)}>
             <FormControlLabel value="money" control={<Radio />} label="Ernie" />
             <FormControlLabel value="todos" control={<Radio />} label="Merel" />
-            <FormControlLabel value="reminders" control={<Radio />} label="Pin-Jie" />
+            <FormControlLabel value="reminders" control={<Radio />} label="PinJie" />
             <FormControlLabel value="work" control={<Radio />} label="Muhammed" />
           </RadioGroup>
         </FormControl>

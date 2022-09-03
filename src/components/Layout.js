@@ -63,7 +63,7 @@ export default function Layout({ children }) {
       path: '/' 
     },
     { 
-      text: 'Create Note', 
+      text: 'PCM to EN Translation', 
       icon: <AddCircleOutlineOutlined color="secondary" />, 
       path: '/create' 
     },

@@ -35,7 +35,7 @@ const CreateNote = () => {
         component="h2"
         gutterBottom
       >
-        Create a New Note
+        Please Enter PCM text to be translated into English
       </Typography>
 
       <form noValidate autoComplete="off" onSubmit={handleSubmit}>
@@ -52,7 +52,7 @@ const CreateNote = () => {
         <TextField
           className={classes.field}
           onChange={(e) => noteFormChanged("details", e.target.value)}
-          label="Details"
+          label="PCM To enlgish details"
           variant="outlined"
           color="secondary"
           multiline
@@ -71,14 +71,14 @@ const CreateNote = () => {
             value={note.category}
             onChange={(e) => noteFormChanged("category", e.target.value)}
           >
-            <FormControlLabel value="money" control={<Radio />} label="Money" />
-            <FormControlLabel value="todos" control={<Radio />} label="Todos" />
+            <FormControlLabel value="money" control={<Radio />} label="Ernie" />
+            <FormControlLabel value="todos" control={<Radio />} label="Merel" />
             <FormControlLabel
               value="reminders"
               control={<Radio />}
-              label="Reminders"
+              label="PinJie"
             />
-            <FormControlLabel value="work" control={<Radio />} label="Work" />
+            <FormControlLabel value="work" control={<Radio />} label="Muhammed" />
           </RadioGroup>
         </FormControl>
 
@@ -88,7 +88,7 @@ const CreateNote = () => {
           variant="contained"
           endIcon={<KeyboardArrowRightIcon />}
         >
-          Submit
+          Translate PCM to EN
         </Button>
       </form>
     </Container>
