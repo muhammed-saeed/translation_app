@@ -1,5 +1,5 @@
 # main.py
-import nltk
+# import nltk
 from flask import request
 from flask import jsonify
 from flask import Flask, render_template, make_response
