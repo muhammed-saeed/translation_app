@@ -32,7 +32,13 @@ export const NoteFormProvider = ({ children }) => {
       setDetailsError(true);
     }
     if (note.title && note.details) {
-      await translateNote(note);
+      const result = await translateNote(note);
+      setNote((prevState) => {
+        return {
+          ...prevState,
+          details: result.translatedDetails,
+        };
+      });
     }
   };
 

@@ -47,6 +47,7 @@ const CreateNote = () => {
           color="secondary"
           fullWidth
           required
+          value={note.title}
           error={titleError}
         />
         <TextField
@@ -59,6 +60,7 @@ const CreateNote = () => {
           rows={4}
           fullWidth
           required
+          value={note.details}
           error={detailsError}
         />
 
@@ -78,7 +80,11 @@ const CreateNote = () => {
               control={<Radio />}
               label="PinJie"
             />
-            <FormControlLabel value="work" control={<Radio />} label="Muhammed" />
+            <FormControlLabel
+              value="work"
+              control={<Radio />}
+              label="Muhammed"
+            />
           </RadioGroup>
         </FormControl>
 

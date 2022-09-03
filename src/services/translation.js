@@ -15,5 +15,5 @@ export const translateNote = async (note) => {
       },
     }
   );
-  if (response.status === 200) console.log(response);
+  if (response.status === 200) return response.data;
 };

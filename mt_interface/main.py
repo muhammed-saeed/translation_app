@@ -40,33 +40,14 @@ def pcm_en_mt_out_processing():
 
 @app.route('/', methods=['POST'])
 def my_form_post():
-    details = request.get_json()['details']
-    text = details['details']
-    print(f"the type of detail is {details}")
+    requestBody = request.get_json()
+    text = requestBody['details']
+    print(f"the type of detail is {text}")
     subprocess.call(save_line)
     write_file(text)
     call_pcm_en()
     machine_translated = pcm_en_mt_out_processing()
 
-
-   
-
-    # I just commented the code below for testing purposes
-
-    # nltk.download('vader_lexicon')
-    # from nltk.sentiment.vader import SentimentIntensityAnalyzer
-    # sid = SentimentIntensityAnalyzer()
-    # score = ((sid.polarity_scores(str(text))))['compound']
-
-    # if(score > 0):
-    #     label = 'This sentence is positive'
-    # elif(score == 0):
-    #     label = 'This sentence is neutral'
-    # else:
-    #     label = 'This sentence is negative'
-
-    # TODO: (M. Yahia) right now I'm just returning the same text received from react
-    # you have to replac the below 'details' variable with the translated one
     return({"translatedDetails": machine_translated})
 
 if __name__ == "__main__":
