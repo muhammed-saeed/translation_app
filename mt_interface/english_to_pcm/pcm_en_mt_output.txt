@@ -1,5 +1,0 @@
-S-0	▁ <unk> d i ▁bi el ▁is ▁trans le ted ▁wey ▁better ▁bikos <unk> 0 1 5 <unk> 0 1 2 <unk>
-W-0	0.358	seconds
-H-0	-0.7152900099754333	▁ <unk> d i ▁was ▁trans fer red ▁for ▁a ▁hundred ▁and ▁eight y .
-D-0	-0.7152900099754333	▁ <unk> d i ▁was ▁trans fer red ▁for ▁a ▁hundred ▁and ▁eight y .
-P-0	-1.5892 -0.0468 -0.1003 -0.6475 -1.0795 -0.3538 -2.0008 -0.2361 -1.0404 -2.1479 -0.6660 -0.0811 -0.6303 -0.4131 -0.2812 -0.1307

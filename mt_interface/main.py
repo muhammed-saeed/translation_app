@@ -11,7 +11,7 @@ pcm_en_calling = "/home/CE/musaeed/mt_interface/test.sh"
 @app.route('/')
 def my_form():
     return render_template('index.html')
-file = r"C:\Users\lst\Documents\translation_app\mt_interface\models.txt"
+file = "models.txt"
 def save_line(details):
     with open(file, 'w') as fb:
         json.dump(details, fb)
@@ -43,10 +43,11 @@ def my_form_post():
     requestBody = request.get_json()
     text = requestBody['details']
     print(f"the type of detail is {text}")
-    subprocess.call(save_line)
+    # subprocess.call(save_line)
     write_file(text)
     call_pcm_en()
     machine_translated = pcm_en_mt_out_processing()
+    # machine_translated = text
 
     return({"translatedDetails": machine_translated})
 

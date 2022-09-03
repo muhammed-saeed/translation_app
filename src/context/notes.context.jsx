@@ -5,7 +5,7 @@ const NoteFormContext = createContext({});
 
 export const NoteFormProvider = ({ children }) => {
   const [note, setNote] = useState({
-    title: "",
+    title: "title is set",
     details: "",
     category: "money",
   });
@@ -36,7 +36,7 @@ export const NoteFormProvider = ({ children }) => {
       setNote((prevState) => {
         return {
           ...prevState,
-          details: result.translatedDetails,
+          title: result.translatedDetails,
         };
       });
     }
