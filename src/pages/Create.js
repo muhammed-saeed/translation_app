@@ -72,7 +72,7 @@ export default function Create() {
         />
         <TextField className={classes.field}
           onChange={(e) => setDetails(e.target.value)}
-          label="Details"
+          label="Please Type the PCM Text Here"
           variant="outlined"
           color="secondary"
           multiline
