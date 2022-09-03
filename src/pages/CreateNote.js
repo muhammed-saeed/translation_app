@@ -45,18 +45,7 @@ const CreateNote = () => {
       </Typography>
 
       <form noValidate autoComplete="off" onSubmit={handleSubmit}>
-        <TextField
-          className={classes.field}
-          onChange={(e) => noteFormChanged("title", e.target.value)}
-          label="Note Title"
-          variant="outlined"
-          color="secondary"
-          fullWidth
-          required
-          value={note.title}
-          error={titleError}
-        />
-        <TextField
+      <TextField
           className={classes.field}
           onChange={(e) => noteFormChanged("details", e.target.value)}
           label="PCM To enlgish details"
@@ -70,10 +59,22 @@ const CreateNote = () => {
           error={detailsError}
         />
 
+        <TextField
+          className={classes.field}
+          onChange={(e) => noteFormChanged("title", e.target.value)}
+          label="Translated Text "
+          variant="outlined"
+          color="secondary"
+          fullWidth
+          
+          value={note.title}
+         
+        />
+       
         {/* <Radio value="hello" />
         <Radio value="goodbye" /> */}
 
-        <FormControl className={classes.field}>
+        {/* <FormControl className={classes.field}>
           <FormLabel>Note Category</FormLabel>
           <RadioGroup
             value={note.category}
@@ -92,7 +93,7 @@ const CreateNote = () => {
               label="Muhammed"
             />
           </RadioGroup>
-        </FormControl>
+        </FormControl> */}
 
         {submitting ? (
           <CircularProgress color="secondary" />

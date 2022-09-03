@@ -3,7 +3,7 @@ import Typography from '@material-ui/core/Typography'
 import Button from '@material-ui/core/Button'
 import Container from '@material-ui/core/Container'
 import KeyboardArrowRightIcon from '@material-ui/icons/KeyboardArrowRight'
-import { makeStyles } from '@material-ui/core'
+import { makeStyles, TextareaAutosize } from '@material-ui/core'
 import TextField from '@material-ui/core/TextField'
 import Radio from '@material-ui/core/Radio'
 import RadioGroup from '@material-ui/core/RadioGroup'
@@ -23,7 +23,7 @@ const useStyles = makeStyles({
 export default function Create() {
   const classes = useStyles()
   const history = useHistory()
-  const [title, setTitle] = useState('')
+  const [title, setTitle] = useState('titlenotneeded')
   const [details, setDetails] = useState('')
   const [titleError, setTitleError] = useState(false)
   const [detailsError, setDetailsError] = useState(false)
@@ -60,17 +60,7 @@ export default function Create() {
         Please Enter Pidgin Text to be translated into English
       </Typography>
       
-      <form noValidate autoComplete="off" onSubmit={handleSubmit}>
-        <TextField className={classes.field}
-          onChange={(e) => setTitle(e.target.value)}
-          label="Note Title" 
-          variant="outlined" 
-          color="secondary" 
-          fullWidth
-          required
-          error={titleError}
-        />
-        <TextField className={classes.field}
+      <TextField className={classes.field}
           onChange={(e) => setDetails(e.target.value)}
           label="Please Type the PCM Text Here"
           variant="outlined"
@@ -82,6 +72,15 @@ export default function Create() {
           error={detailsError}
         />
 
+      <form noValidate autoComplete="off" onSubmit={handleSubmit}>
+        <TextareaAutosize className={classes.field}
+          onChange={(e) => setTitle(e.target.value)}
+          label="Translated text" 
+          variant="outlined" 
+          color="secondary" 
+          fullWidth
+          
+        />
         {/* <Radio value="hello" />
         <Radio value="goodbye" /> */}
 
