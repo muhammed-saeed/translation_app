@@ -3,7 +3,7 @@ import Typography from "@material-ui/core/Typography";
 import Button from "@material-ui/core/Button";
 import Container from "@material-ui/core/Container";
 import KeyboardArrowRightIcon from "@material-ui/icons/KeyboardArrowRight";
-import { makeStyles } from "@material-ui/core";
+import { CircularProgress, makeStyles } from "@material-ui/core";
 import TextField from "@material-ui/core/TextField";
 import Radio from "@material-ui/core/Radio";
 import RadioGroup from "@material-ui/core/RadioGroup";
@@ -24,8 +24,14 @@ const useStyles = makeStyles({
 const CreateNote = () => {
   const classes = useStyles();
   const history = useHistory();
-  const { note, noteFormChanged, handleSubmit, titleError, detailsError } =
-    useNoteForm();
+  const {
+    note,
+    noteFormChanged,
+    handleSubmit,
+    titleError,
+    detailsError,
+    submitting,
+  } = useNoteForm();
 
   return (
     <Container size="sm">
@@ -88,14 +94,18 @@ const CreateNote = () => {
           </RadioGroup>
         </FormControl>
 
-        <Button
-          type="submit"
-          color="secondary"
-          variant="contained"
-          endIcon={<KeyboardArrowRightIcon />}
-        >
-          Translate PCM to EN
-        </Button>
+        {submitting ? (
+          <CircularProgress color="secondary" />
+        ) : (
+          <Button
+            type="submit"
+            color="secondary"
+            variant="contained"
+            endIcon={<KeyboardArrowRightIcon />}
+          >
+            Translate PCM to EN
+          </Button>
+        )}
       </form>
     </Container>
   );

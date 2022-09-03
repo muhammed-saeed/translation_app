@@ -9,6 +9,7 @@ export const NoteFormProvider = ({ children }) => {
     details: "",
     category: "money",
   });
+  const [submitting, setSubmitting] = useState(false);
   const [titleError, setTitleError] = useState(false);
   const [detailsError, setDetailsError] = useState(false);
 
@@ -32,13 +33,18 @@ export const NoteFormProvider = ({ children }) => {
       setDetailsError(true);
     }
     if (note.title && note.details) {
+      setSubmitting(true);
       const result = await translateNote(note);
-      setNote((prevState) => {
-        return {
-          ...prevState,
-          details: result.translatedDetails,
-        };
-      });
+      if (result) {
+        setSubmitting(false);
+        setNote((prevState) => {
+          return {
+            ...prevState,
+            details: result.translatedDetails,
+          };
+        });
+      } else {
+      }
     }
   };
 
@@ -49,8 +55,9 @@ export const NoteFormProvider = ({ children }) => {
       detailsError,
       noteFormChanged,
       handleSubmit,
+      submitting,
     }),
-    [note]
+    [note, submitting]
   );
   return (
     <NoteFormContext.Provider value={memoedValue}>
