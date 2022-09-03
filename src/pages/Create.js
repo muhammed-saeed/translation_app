@@ -57,7 +57,7 @@ export default function Create() {
         component="h2"
         gutterBottom
       >
-        Create a New Note
+        Please Enter Pidgin Text to be translated into English
       </Typography>
       
       <form noValidate autoComplete="off" onSubmit={handleSubmit}>
@@ -100,7 +100,7 @@ export default function Create() {
           color="secondary" 
           variant="contained"
           endIcon={<KeyboardArrowRightIcon />}>
-          Submit
+          Translate PCM to EN
         </Button>
       </form>
 
