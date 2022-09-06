@@ -51,5 +51,18 @@ def my_form_post():
 
     return({"translatedDetails": machine_translated})
 
+
+@app.route('/enpcm', methods=['POST'])
+def my_form_post():
+    requestBody = request.get_json()
+    text = requestBody['details']
+    print(f"the type of detail is {text}")
+    # subprocess.call(save_line)
+    write_file(text)
+    call_pcm_en()
+    machine_translated = pcm_en_mt_out_processing()
+    # machine_translated = text
+
+    return({"translatedDetails": machine_translated})
 if __name__ == "__main__":
     app.run(port='8000', threaded=False, debug=True)
