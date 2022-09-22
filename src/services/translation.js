@@ -3,7 +3,7 @@ import axios from "axios";
 export const translateNote = async (note) => {
   console.log(note);
   const response = await axios.post(
-    "/",
+    "/pcm_en",
     {
       title: note.title,
       details: note.details,

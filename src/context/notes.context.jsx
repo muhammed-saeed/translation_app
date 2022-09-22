@@ -1,11 +1,11 @@
 import React, { createContext, useContext, useMemo, useState } from "react";
 import { translateNote } from "../services/translation";
-
+import {translateENtoPCM} from  "../services/translation"
 const NoteFormContext = createContext({});
 
 export const NoteFormProvider = ({ children }) => {
   const [note, setNote] = useState({
-    title: "title is set",
+    title: "wait the translation will appear here ",
     details: "",
     category: "money",
   });
@@ -40,7 +40,7 @@ export const NoteFormProvider = ({ children }) => {
         setNote((prevState) => {
           return {
             ...prevState,
-            details: result.translatedDetails,
+            title: result.translatedDetails,
           };
         });
       }

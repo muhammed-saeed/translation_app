@@ -11,7 +11,7 @@ import FormControlLabel from "@material-ui/core/FormControlLabel";
 import FormControl from "@material-ui/core/FormControl";
 import FormLabel from "@material-ui/core/FormLabel";
 import { useHistory } from "react-router-dom";
-import useNoteForm from "../context/notes.context";
+import useNoteForm from "../context/enpcm.context";
 
 const useStyles = makeStyles({
   field: {
@@ -41,14 +41,14 @@ const ENtoPCM = () => {
         component="h2"
         gutterBottom
       >
-        Please Enter PCM text to be translated into English
+        Please Enter English text to be translated into PCM
       </Typography>
 
       <form noValidate autoComplete="off" onSubmit={handleSubmit}>
       <TextField
           className={classes.field}
           onChange={(e) => noteFormChanged("details", e.target.value)}
-          label="PCM To enlgish details"
+          label="English to PCM text please"
           variant="outlined"
           color="secondary"
           multiline
@@ -104,7 +104,7 @@ const ENtoPCM = () => {
             variant="contained"
             endIcon={<KeyboardArrowRightIcon />}
           >
-            Translate PCM to EN
+            Translate EN to PCM
           </Button>
         )}
       </form>

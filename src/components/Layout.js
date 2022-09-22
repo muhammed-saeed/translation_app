@@ -67,6 +67,11 @@ export default function Layout({ children }) {
       icon: <AddCircleOutlineOutlined color="secondary" />, 
       path: '/create' 
     },
+    { 
+      text: 'En to PCM Translation', 
+      icon: <AddCircleOutlineOutlined color="secondary" />, 
+      path: '/enpcm' 
+    },
   ];
 
   return (

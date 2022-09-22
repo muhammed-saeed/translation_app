@@ -5,7 +5,9 @@ import { createMuiTheme, ThemeProvider } from "@material-ui/core";
 import { purple } from "@material-ui/core/colors";
 import Layout from "./components/Layout";
 import { NoteFormProvider } from "./context/notes.context";
+import {NoteFormProviderENPCM} from "./context/enpcm.context"
 import CreateNote from "./pages/CreateNote";
+import ENtoPCM from "./pages/ENtoPCM";
 
 const theme = createMuiTheme({
   palette: {
@@ -36,6 +38,11 @@ function App() {
               <NoteFormProvider>
                 <CreateNote />
               </NoteFormProvider>
+            </Route>
+            <Route path="/enpcm">
+              <NoteFormProviderENPCM>
+                <ENtoPCM />
+              </NoteFormProviderENPCM>
             </Route>
           </Switch>
         </Layout>

@@ -45,7 +45,7 @@ export default function Create() {
         method: 'POST',
         headers: {"Content-type": "application/json"},
         body: JSON.stringify({ title, details, category })
-      }).then(() => history.push('/'))
+      }).then(() => history.push('/create'))
     } 
   }
 
