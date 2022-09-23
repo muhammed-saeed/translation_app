@@ -23,16 +23,9 @@ en_pcm_calling= "/home/CE/musaeed/translation_app/mt_interface/test_en_pcm.sh"
 def my_form():
     return render_template('index.html')
 file = "models.txt"
-<<<<<<< HEAD
 
 from fairseq.models.transformer import TransformerModel
 en2pcm_large_model_path="/home/CE/musaeed/ironside/back_translation_joint_vocab_checkpoint/Jones_BT_config_validation_joint_data_bpe_en_pcm_6_l_4_h_256_embedd_64_b_1024_ffnn_checkpoints/"
-=======
-#@@
-
-from fairseq.models.transformer import TransformerModel
-en2pcm_large_model_path="/home/CE/musaeed/shallow_model_en_pcm/real_data_en_pcm_1_layer_2_heads_512_embedddings_512_ffnn/"
->>>>>>> 928d3354ce7e6fbbf800de28b99d0ee3bcd785b4
 en2pcm_small_model_path='/home/CE/musaeed/shallow_model_en_pcm/real_data_en_pcm_1_layer_2_heads_512_embedddings_512_ffnn/'
 en2pcm_preprocess_large="/home/CE/musaeed/ironside/Machine_Translation/back_translation/JW300_with_bible_joined_embeddings/BT_en_pcm.tokenized.en-pcm"
 en2pcm_preprocess_small='/home/CE/musaeed/auto-annotator/kd-distiller/JW300_with_bible_joined_embeddings/FAKE_en_pcm.tokenized.en-pcm'
@@ -43,11 +36,7 @@ en2pcm = TransformerModel.from_pretrained(
   bpe='sentencepiece',
   sentencepiece_model='/home/CE/musaeed/auto-annotator/kd-distiller/JW300_with_bible_joined_embeddings/bpe_dict_path/en__vocab_4000.model'
 )
-<<<<<<< HEAD
 pcm2en_large_model_path="/home/CE/musaeed/pcm_en/"
-=======
-pcm2en_large_model_path="/home/CE/musaeed/kd-distiller/checkpoints/pcm_en_1_layer_512_embedddings_512_ffnn/"
->>>>>>> 928d3354ce7e6fbbf800de28b99d0ee3bcd785b4
 pcm2en_small_model_path='/home/CE/musaeed/kd-distiller/checkpoints/pcm_en_1_layer_512_embedddings_512_ffnn/'
 pcm2en_small_model_preprocess='/home/CE/musaeed/auto-annotator/kd-distiller/JW300_with_bible_joined_embeddings/FAKE_pcm_en.tokenized.pcm-en'
 pcm2en_large_model_preprocess="/home/CE/musaeed/pcm_en/BT_pcm_en.tokenized.pcm-en"
@@ -125,11 +114,7 @@ def my_form_post():
     # print(f"the type of detail is {text}")
     # subprocess.call(save_line)
     machine_translated = pcm2en.translate(text)
-<<<<<<< HEAD
     print(f"the translated text is {machine_translated}")
-=======
-
->>>>>>> 928d3354ce7e6fbbf800de28b99d0ee3bcd785b4
     # write_file(text)
     # call_pcm_en()
     # machine_translated = pcm_en_mt_out_processing()
@@ -150,10 +135,7 @@ def my_form_post_en_pcm():
 
     # write_file_en(text)
     print("reached here")
-<<<<<<< HEAD
     print(f"the translated text is {machine_translated}")
-=======
->>>>>>> 928d3354ce7e6fbbf800de28b99d0ee3bcd785b4
     # call_en_pcm()
     # machine_translated = en_pcm_mt_out_processing()
     # # machine_translated = text
