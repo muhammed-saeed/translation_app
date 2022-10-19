@@ -82,3 +82,22 @@ export const paraphraseEN = async (note) => {
   );
   if (response.status === 200) return response.data;
 };
+
+
+export const summEN = async (note) => {
+  console.log(note);
+  const response = await instance.post(
+    `${backend_api}/summen`,
+    {
+      title: note.title,
+      details: note.details,
+      cateogry: note.cateogry,
+    },
+    {
+      headers: {
+        "Content-Type": "application/json",
+      },
+    }
+  );
+  if (response.status === 200) return response.data;
+};

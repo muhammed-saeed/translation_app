@@ -165,5 +165,37 @@ def my_form_en_paraphrasing():
  
     return({"translatedDetails": machine_translated})
 
+@app.route('/summen', methods=['POST'])
+def my_form_en_summarization():
+    requestBody = request.get_json()
+    print("here")
+    text = requestBody['details']
+    print("#######EN Paraphrasing########")    
+    machine_translated = text
+    print(f"the text to be translated is {text}")
+    preprocess_text = text.strip().replace("\n","")
+    t5_prepared_Text = "summarize: "+preprocess_text
+    print ("original text preprocessed: \n", preprocess_text)
+
+    tokenized_text = t5_tokenizer.encode(t5_prepared_Text, return_tensors="pt")
+
+
+    # summmarize 
+    summary_ids = t5_model.generate(tokenized_text,
+                                        num_beams=4,
+                                        no_repeat_ngram_size=2,
+                                        min_length=30,
+                                        max_length=100,
+                                        early_stopping=True)
+
+    output = t5_tokenizer.decode(summary_ids[0], skip_special_tokens=True)
+
+    print ("\n\nSummarized text: \n",output)
+    machine_translated = output
+    return({"translatedDetails": machine_translated})
+
+
+
+
 if __name__ == "__main__":
     app.run(port=8000, threaded=False, debug=True)

@@ -82,6 +82,12 @@ export default function Layout({ children }) {
       icon: <AddCircleOutlineOutlined color="secondary" />, 
       path: '/paraEN' 
     },
+
+    { 
+      text: 'En Summarization', 
+      icon: <AddCircleOutlineOutlined color="secondary" />, 
+      path: '/summEN' 
+    },
   ];
 
   return (

@@ -41,14 +41,14 @@ const ParaEN = () => {
         component="h2"
         gutterBottom
       >
-        Please Enter English text to be translated into PCM
+        Please Enter English text to be Paraphrased
       </Typography>
 
       <form noValidate autoComplete="off" onSubmit={handleSubmit}>
       <TextField
           className={classes.field}
           onChange={(e) => noteFormChanged("details", e.target.value)}
-          label="English to AR text please"
+          label="English text to be paraphrased"
           variant="outlined"
           color="secondary"
           multiline
@@ -62,11 +62,12 @@ const ParaEN = () => {
         <TextField
           className={classes.field}
           onChange={(e) => noteFormChanged("title", e.target.value)}
-          label="Translated Text "
+          label="Paraphrased  Text "
           variant="outlined"
           color="secondary"
           fullWidth
-          
+          rows={4}
+          multiline
           value={note.title}
          
         />
@@ -104,7 +105,7 @@ const ParaEN = () => {
             variant="contained"
             endIcon={<KeyboardArrowRightIcon />}
           >
-            Translate EN to PCM
+            Paraphrase English Text
           </Button>
         )}
       </form>

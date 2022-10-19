@@ -11,7 +11,7 @@ import FormControlLabel from "@material-ui/core/FormControlLabel";
 import FormControl from "@material-ui/core/FormControl";
 import FormLabel from "@material-ui/core/FormLabel";
 import { useHistory } from "react-router-dom";
-import useNoteForm from "../context/en2ar.context";
+import useNoteForm from "../context/summEN.context";
 
 const useStyles = makeStyles({
   field: {
@@ -21,7 +21,7 @@ const useStyles = makeStyles({
   },
 });
 
-const EN2AR = () => {
+const SummEN = () => {
   const classes = useStyles();
   const history = useHistory();
   const {
@@ -41,14 +41,14 @@ const EN2AR = () => {
         component="h2"
         gutterBottom
       >
-        Please Enter English text to be translated into Arabic
+        Please Enter English text to be summarized
       </Typography>
 
       <form noValidate autoComplete="off" onSubmit={handleSubmit}>
       <TextField
           className={classes.field}
           onChange={(e) => noteFormChanged("details", e.target.value)}
-          label="English to AR text please"
+          label="English Text to be summarized"
           variant="outlined"
           color="secondary"
           multiline
@@ -62,10 +62,13 @@ const EN2AR = () => {
         <TextField
           className={classes.field}
           onChange={(e) => noteFormChanged("title", e.target.value)}
-          label="Translated Text "
+          label="Summarized Text "
           variant="outlined"
           color="secondary"
           fullWidth
+          
+          row= {4}
+          multiline
           
           value={note.title}
          
@@ -104,7 +107,7 @@ const EN2AR = () => {
             variant="contained"
             endIcon={<KeyboardArrowRightIcon />}
           >
-            Translate * to Arabic
+            Summarize Text
           </Button>
         )}
       </form>
@@ -112,4 +115,4 @@ const EN2AR = () => {
   );
 };
 
-export default EN2AR;
+export default SummEN;
