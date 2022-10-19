@@ -65,12 +65,17 @@ export default function Layout({ children }) {
     { 
       text: 'PCM to EN Translation', 
       icon: <AddCircleOutlineOutlined color="secondary" />, 
-      path: '/create' 
+      path: '/translation' 
     },
     { 
       text: 'En to PCM Translation', 
       icon: <AddCircleOutlineOutlined color="secondary" />, 
       path: '/enpcm' 
+    },
+    { 
+      text: 'En to AR Translation', 
+      icon: <AddCircleOutlineOutlined color="secondary" />, 
+      path: '/en2ar' 
     },
   ];
 
