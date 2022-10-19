@@ -7,9 +7,11 @@ import Layout from "./components/Layout";
 import { NoteFormProvider } from "./context/notes.context";
 import {NoteFormProviderENPCM} from "./context/enpcm.context"
 import {NoteFormProviderENAR} from "./context/en2ar.context"
+import {NoteFormProviderParaEN} from "./context/paraEN.context"
 import CreateNote from "./pages/CreateNote";
 import ENtoPCM from "./pages/ENtoPCM";
 import En2AR from "./pages/EN2AR"
+import ParaEN from "./pages/ParaEN";
 
 const theme = createMuiTheme({
   palette: {
@@ -50,6 +52,12 @@ function App() {
               <NoteFormProviderENAR>
                 <En2AR />
               </NoteFormProviderENAR>
+            </Route>
+
+            <Route path="/paraEN">
+              <NoteFormProviderParaEN>
+                <ParaEN />
+              </NoteFormProviderParaEN>
             </Route>
           </Switch>
         </Layout>

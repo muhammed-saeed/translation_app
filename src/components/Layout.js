@@ -77,6 +77,11 @@ export default function Layout({ children }) {
       icon: <AddCircleOutlineOutlined color="secondary" />, 
       path: '/en2ar' 
     },
+    { 
+      text: 'En Paraphrasing', 
+      icon: <AddCircleOutlineOutlined color="secondary" />, 
+      path: '/paraEN' 
+    },
   ];
 
   return (

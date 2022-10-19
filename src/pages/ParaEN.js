@@ -11,7 +11,7 @@ import FormControlLabel from "@material-ui/core/FormControlLabel";
 import FormControl from "@material-ui/core/FormControl";
 import FormLabel from "@material-ui/core/FormLabel";
 import { useHistory } from "react-router-dom";
-import useNoteForm from "../context/en2ar.context";
+import useNoteForm from "../context/paraEN.context";
 
 const useStyles = makeStyles({
   field: {
@@ -21,7 +21,7 @@ const useStyles = makeStyles({
   },
 });
 
-const EN2AR = () => {
+const ParaEN = () => {
   const classes = useStyles();
   const history = useHistory();
   const {
@@ -104,7 +104,7 @@ const EN2AR = () => {
             variant="contained"
             endIcon={<KeyboardArrowRightIcon />}
           >
-            Translate * to Arabic
+            Translate EN to PCM
           </Button>
         )}
       </form>
@@ -112,4 +112,4 @@ const EN2AR = () => {
   );
 };
 
-export default EN2AR;
+export default ParaEN;

@@ -63,3 +63,22 @@ export const translateENtoAR = async (note) => {
   );
   if (response.status === 200) return response.data;
 };
+
+
+export const paraphraseEN = async (note) => {
+  console.log(note);
+  const response = await instance.post(
+    `${backend_api}/paraen`,
+    {
+      title: note.title,
+      details: note.details,
+      cateogry: note.cateogry,
+    },
+    {
+      headers: {
+        "Content-Type": "application/json",
+      },
+    }
+  );
+  if (response.status === 200) return response.data;
+};

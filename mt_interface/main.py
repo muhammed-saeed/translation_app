@@ -71,22 +71,12 @@ model = M2M100ForConditionalGeneration.from_pretrained("facebook/m2m100_418M")
 tokenizer = M2M100Tokenizer.from_pretrained("facebook/m2m100_418M")
 
 
+from transformers import AutoTokenizer, AutoModelForSeq2SeqLM
 
-# # translate Arabic to English
-# tokenizer.src_lang = "ar_AR"
-# article_ar = "السلام عليكم كيف حالك  "
-# encoded_ar = tokenizer(article_ar, return_tensors="pt")
-# generated_tokens = model.generate(**encoded_ar, forced_bos_token_id=tokenizer.lang_code_to_id["en_XX"])
-# decoded = tokenizer.batch_decode(generated_tokens, skip_special_tokens=True)
-# print(decoded[0])
+t5_tokenizer = AutoTokenizer.from_pretrained("Vamsi/T5_Paraphrase_Paws")  
+t5_model = AutoModelForSeq2SeqLM.from_pretrained("Vamsi/T5_Paraphrase_Paws")
 
-# translate English to Arabic
-# tokenizer.src_lang = "en_EN"
-# article_en = "Why you don't have hair?"
-# encoded_ar = tokenizer(article_en, return_tensors="pt")
-# generated_tokens = model.generate(**encoded_ar, forced_bos_token_id=tokenizer.lang_code_to_id["ar_AR"])
-# decoded = tokenizer.batch_decode(generated_tokens, skip_special_tokens=True)
-# print(decoded[0])
+
 
 
 
@@ -135,6 +125,43 @@ def my_form_post_en_ar():
     print("##################")
     # print(machine_translated)
     machine_translated  = arabic_output[0]
+ 
+    return({"translatedDetails": machine_translated})
+
+
+@app.route('/paraen', methods=['POST'])
+def my_form_en_paraphrasing():
+    requestBody = request.get_json()
+    print("here")
+    text = requestBody['details']
+    print("#######EN Paraphrasing########")    
+    machine_translated = text
+    print(f"the text to be translated is {text}")
+    sentence = machine_translated
+
+    text =  "paraphrase: " + sentence + " </s>"
+
+    encoding = t5_tokenizer.encode_plus(text,pad_to_max_length=True, return_tensors="pt")
+    input_ids, attention_masks = encoding["input_ids"], encoding["attention_mask"]
+
+
+    outputs = t5_model.generate(
+        input_ids=input_ids, attention_mask=attention_masks,
+        max_length=256,
+        do_sample=True,
+        top_k=120,
+        top_p=0.95,
+        early_stopping=True,
+        num_return_sequences=1
+    )
+    lines= []
+    line=None
+    for output in outputs:
+        line = t5_tokenizer.decode(output, skip_special_tokens=True,clean_up_tokenization_spaces=True)
+        print(line)
+        lines.append(line)
+
+    machine_translated  = lines[0]
  
     return({"translatedDetails": machine_translated})
 

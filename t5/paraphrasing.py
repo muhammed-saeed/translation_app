@@ -1,14 +1,13 @@
 from transformers import AutoTokenizer, AutoModelForSeq2SeqLM
-​
+
 tokenizer = AutoTokenizer.from_pretrained("Vamsi/T5_Paraphrase_Paws")  
 model = AutoModelForSeq2SeqLM.from_pretrained("Vamsi/T5_Paraphrase_Paws")
-​
-sentence = "This is something which i cannot understand at all"
+sentence = "Hi you what is going on with you now-days`"
 
 text =  "paraphrase: " + sentence + " </s>"
 
 encoding = tokenizer.encode_plus(text,pad_to_max_length=True, return_tensors="pt")
-input_ids, attention_masks = encoding["input_ids"].to("cuda"), encoding["attention_mask"].to("cuda")
+input_ids, attention_masks = encoding["input_ids"], encoding["attention_mask"]
 
 
 outputs = model.generate(
@@ -24,4 +23,4 @@ outputs = model.generate(
 for output in outputs:
     line = tokenizer.decode(output, skip_special_tokens=True,clean_up_tokenization_spaces=True)
     print(line)
-​
+
