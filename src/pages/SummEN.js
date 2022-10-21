@@ -65,11 +65,10 @@ const SummEN = () => {
           label="Summarized Text "
           variant="outlined"
           color="secondary"
+          fcolor="secondary"
           fullWidth
-          
-          row= {4}
+          rows={4}
           multiline
-          
           value={note.title}
          
         />
