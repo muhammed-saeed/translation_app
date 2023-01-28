@@ -11,7 +11,7 @@ import FormControlLabel from "@material-ui/core/FormControlLabel";
 import FormControl from "@material-ui/core/FormControl";
 import FormLabel from "@material-ui/core/FormLabel";
 import { useHistory } from "react-router-dom";
-import useNoteForm from "../context/enpcm.context";
+import useNoteForm from "../context/discourse_classifier.context";
 
 const useStyles = makeStyles({
   field: {
@@ -21,7 +21,7 @@ const useStyles = makeStyles({
   },
 });
 
-const ENtoPCM = () => {
+const DiscourseClassifier = () => {
   const classes = useStyles();
   const history = useHistory();
   const {
@@ -41,14 +41,14 @@ const ENtoPCM = () => {
         component="h2"
         gutterBottom
       >
-        Please Enter English text to be translated into PCM
+        Please enter PCM to be parsed
       </Typography>
 
       <form noValidate autoComplete="off" onSubmit={handleSubmit}>
       <TextField
           className={classes.field}
           onChange={(e) => noteFormChanged("details", e.target.value)}
-          label="English to PCM text please"
+          label="Enter PCM text please"
           variant="outlined"
           color="secondary"
           multiline
@@ -62,7 +62,7 @@ const ENtoPCM = () => {
         <TextField
           className={classes.field}
           onChange={(e) => noteFormChanged("title", e.target.value)}
-          label="Translated Text "
+          label="Relations output will be here "
           variant="outlined"
           color="secondary"
           fullWidth
@@ -105,7 +105,7 @@ const ENtoPCM = () => {
             variant="contained"
             endIcon={<KeyboardArrowRightIcon />}
           >
-            Translate EN to PCM
+            Extract the relations
           </Button>
         )}
       </form>
@@ -113,4 +113,4 @@ const ENtoPCM = () => {
   );
 };
 
-export default ENtoPCM;
+export default DiscourseClassifier;

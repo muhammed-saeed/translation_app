@@ -1,11 +1,11 @@
 import React, { createContext, useContext, useMemo, useState } from "react";
 import { translateNote } from "../services/translation";
-import {translateENtoPCM} from  "../services/translation"
+import {discourse_classification} from  "../services/translation"
 const NoteFormContext = createContext({});
 
-export const NoteFormProvider = ({ children }) => {
+export const NoteFormProviderDiscourseClassifier = ({ children }) => {
   const [note, setNote] = useState({
-    title: "wait the translation will appear here ",
+    title: {},
     details: "",
     category: "money",
   });
@@ -34,7 +34,7 @@ export const NoteFormProvider = ({ children }) => {
     }
     if (note.title && note.details) {
       setSubmitting(true);
-      const result = await translateNote(note);
+      const result = await discourse_classification(note);
       if (result) {
         setSubmitting(false);
         setNote((prevState) => {

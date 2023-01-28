@@ -66,6 +66,8 @@ const CreateNote = () => {
           variant="outlined"
           color="secondary"
           fullWidth
+          multiline
+          rows={4}
           
           value={note.title}
          
