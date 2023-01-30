@@ -1,0 +1,1 @@
+(discourse_classifier) musaeed@jones-6:~/translation_app/mt_interface$ CUDA_VISIBLE_DEVICES=1 python app/run_bert_discoures_classifier.py --model-path /home/CE/musaeed/bert_model/ --port 8081 --reload

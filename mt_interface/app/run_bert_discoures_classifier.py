@@ -154,6 +154,38 @@ def apply_parser(r: ParserRequest):
     # return doc.to_json()
 
 
+@app.post("/api/parserEN")
+def apply_parser(r: ParserRequest):
+    # docs = load_texts([r.details])
+    # update_dataset_embeddings(docs, bert_model=args.bert_model)
+    # update_dataset_embeddings(docs, bert_model=model_path)
+    # doc = parser(docs[0])
+    # return 200;
+    # r = requestBody['details']
+    get_sentence_embeddings = get_sentence_embedder(args.bert_model)
+    # get_sentence_embeddings = get_sentence_embedder(model_path)
+    print(get_sentence_embeddings)
+    # sentence = ["translate pcm to english: " + str(r.details)]
+    # text_ = model.predict(sentence)
+    # machine_translated = en2pcm.translate(text)
+    machine_translated = text_[0]
+    print(f"machine translated {machine_translated}")
+    doc = add_parsers(tokenize(str(r.details)))[0]
+    if len(doc.sentences) == 0:
+        return
+    for sent_i, sent in enumerate(doc.sentences):
+        sent_words = sent.tokens
+        embeddings = get_sentence_embeddings(sent_words)
+        doc.sentences[sent_i].embeddings = embeddings
+    doc = parser(doc)
+    print(doc.to_json())
+    # doc = json.dumps(doc)
+    doc_json = doc.to_json()
+    # return({"translatedDetails": doc})
+    return({"translatedDetails": str(doc_json)})
+    # return doc.to_json()
+
+
 @app.get("/api/parser/config")
 def get_parser_config():
     configs = []
@@ -163,7 +195,8 @@ def get_parser_config():
 
 
 if __name__ == '__main__':
-    # uvicorn.run("app.run_bert_discourse_classifier_for_pcm:app", host=args.hostname, port=args.port, reload=args.reload, timeout_keep_alive=100 )
     uvicorn.run("run_bert_discoures_classifier:app", host=args.hostname, port=args.port, reload=args.reload, timeout_keep_alive=100 )
+    # uvicorn.run("run_bert_discoures_classifier:app",  reload=args.reload, timeout_keep_alive=100 )
+
     # uvicorn.run("app", host=args.hostname, port=args.port, reload=args.reload, timeout_keep_alive=100 )
     # uvicorn.run(app, host=args.hostname, port=args.port, timeout_keep_alive=100 )
