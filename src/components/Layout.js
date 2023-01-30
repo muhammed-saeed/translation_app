@@ -65,7 +65,7 @@ export default function Layout({ children }) {
     {
       text: "PCM to EN Translation",
       icon: <AddCircleOutlineOutlined color="secondary" />,
-      path: "/create",
+      path: "/pcmen",
     },
     {
       text: "En to PCM Translation",
@@ -77,6 +77,12 @@ export default function Layout({ children }) {
       icon: <AddCircleOutlineOutlined color="secondary" />,
 
       path: "discourse_classifier",
+    },
+    {
+      text: "En relation classifier",
+      icon: <AddCircleOutlineOutlined color="secondary" />,
+
+      path: "discourse_classifier_en",
     },
   ];
 

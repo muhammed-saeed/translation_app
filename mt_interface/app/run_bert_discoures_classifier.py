@@ -154,7 +154,7 @@ def apply_parser(r: ParserRequest):
     # return doc.to_json()
 
 
-@app.post("/api/parserEN")
+@app.post("/api/parseren")
 def apply_parser(r: ParserRequest):
     # docs = load_texts([r.details])
     # update_dataset_embeddings(docs, bert_model=args.bert_model)
@@ -168,8 +168,8 @@ def apply_parser(r: ParserRequest):
     # sentence = ["translate pcm to english: " + str(r.details)]
     # text_ = model.predict(sentence)
     # machine_translated = en2pcm.translate(text)
-    machine_translated = text_[0]
-    print(f"machine translated {machine_translated}")
+    # machine_translated = text_[0]
+    print(f"WE are using the english parser and we are here")
     doc = add_parsers(tokenize(str(r.details)))[0]
     if len(doc.sentences) == 0:
         return

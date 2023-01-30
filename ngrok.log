@@ -1,0 +1,87 @@
+t=2023-01-30T17:07:51+0100 lvl=info msg="starting web service" obj=web addr=127.0.0.1:4040
+t=2023-01-30T17:07:51+0100 lvl=eror msg="failed to auth" obj=tunnels.session err="The authtoken you specified does not look like a proper ngrok tunnel authtoken.\nYour authtoken: ...\nInstructions to install your authtoken are on your ngrok dashboard:\nhttps://dashboard.ngrok.com/get-started/your-authtoken\r\n\r\nERR_NGROK_105\r\n"
+t=2023-01-30T17:07:51+0100 lvl=eror msg="failed to reconnect session" obj=csess id=7a415d5ecd2b err="The authtoken you specified does not look like a proper ngrok tunnel authtoken.\nYour authtoken: ...\nInstructions to install your authtoken are on your ngrok dashboard:\nhttps://dashboard.ngrok.com/get-started/your-authtoken\r\n\r\nERR_NGROK_105\r\n"
+t=2023-01-30T17:07:51+0100 lvl=eror msg="session closing" obj=tunnels.session err="The authtoken you specified does not look like a proper ngrok tunnel authtoken.\nYour authtoken: ...\nInstructions to install your authtoken are on your ngrok dashboard:\nhttps://dashboard.ngrok.com/get-started/your-authtoken\r\n\r\nERR_NGROK_105\r\n"
+t=2023-01-30T17:07:51+0100 lvl=info msg="received stop request" obj=app stopReq="{err:0xc0000d5300 restart:false}"
+t=2023-01-30T17:07:51+0100 lvl=eror msg="terminating with error" obj=app err="The authtoken you specified does not look like a proper ngrok tunnel authtoken.\nYour authtoken: ...\nInstructions to install your authtoken are on your ngrok dashboard:\nhttps://dashboard.ngrok.com/get-started/your-authtoken\r\n\r\nERR_NGROK_105\r\n"
+t=2023-01-30T17:07:51+0100 lvl=warn msg="failed to check for update" obj=updater err="Post \"https://update.equinox.io/check\": context canceled"
+t=2023-01-30T17:07:51+0100 lvl=crit msg="command failed" err="The authtoken you specified does not look like a proper ngrok tunnel authtoken.\nYour authtoken: ...\nInstructions to install your authtoken are on your ngrok dashboard:\nhttps://dashboard.ngrok.com/get-started/your-authtoken\r\n\r\nERR_NGROK_105\r\n"
+t=2023-01-30T17:11:35+0100 lvl=info msg="starting web service" obj=web addr=127.0.0.1:4040
+t=2023-01-30T17:11:35+0100 lvl=info msg="tunnel session started" obj=tunnels.session
+t=2023-01-30T17:11:35+0100 lvl=info msg="client session established" obj=csess id=b49b1d55a8eb
+t=2023-01-30T17:11:36+0100 lvl=info msg="started tunnel" obj=tunnels name=note addr=http://localhost:7111 url=https://3d3e-134-96-105-136.ngrok.io
+t=2023-01-30T17:11:36+0100 lvl=info msg="started tunnel" obj=tunnels name=visdom addr=http://localhost:8097 url=https://88b4-134-96-105-136.ngrok.io
+t=2023-01-30T17:11:36+0100 lvl=info msg="started tunnel" obj=tunnels name=tb addr=http://localhost:6006 url=https://cb04-134-96-105-136.ngrok.io
+t=2023-01-30T17:12:49+0100 lvl=warn msg="failed to open private leg" id=5d3b40da78d1 privaddr=localhost:7111 err="dial tcp 127.0.0.1:7111: connect: connection refused"
+t=2023-01-30T17:12:50+0100 lvl=warn msg="failed to open private leg" id=7e52856360f9 privaddr=localhost:7111 err="dial tcp 127.0.0.1:7111: connect: connection refused"
+t=2023-01-30T17:13:14+0100 lvl=info msg="Got quit command" obj=consoleui
+t=2023-01-30T17:13:14+0100 lvl=info msg="received stop request" obj=app stopReq="{err:<nil> restart:false}"
+t=2023-01-30T17:13:14+0100 lvl=info msg="session closing" obj=tunnels.session err=nil
+t=2023-01-30T17:13:14+0100 lvl=info msg="accept failed" obj=csess id=b49b1d55a8eb err="reconnecting session closed"
+t=2023-01-30T17:13:53+0100 lvl=info msg="starting web service" obj=web addr=127.0.0.1:4040
+t=2023-01-30T17:13:54+0100 lvl=info msg="tunnel session started" obj=tunnels.session
+t=2023-01-30T17:13:54+0100 lvl=info msg="client session established" obj=csess id=2378c1537446
+t=2023-01-30T17:13:54+0100 lvl=info msg="started tunnel" obj=tunnels name=tb addr=http://localhost:8081 url=https://386d-134-96-105-136.ngrok.io
+t=2023-01-30T17:13:54+0100 lvl=info msg="started tunnel" obj=tunnels name=visdom addr=http://localhost:8000 url=https://6852-134-96-105-136.ngrok.io
+t=2023-01-30T17:13:54+0100 lvl=info msg="started tunnel" obj=tunnels name=note addr=http://localhost:3000 url=https://4e34-134-96-105-136.ngrok.io
+t=2023-01-30T17:14:24+0100 lvl=info msg="join connections" obj=join id=3badca81704a l=127.0.0.1:3000 r=134.96.198.159:57658
+t=2023-01-30T17:16:46+0100 lvl=info msg="join connections" obj=join id=14a5f0676c73 l=127.0.0.1:3000 r=134.96.198.159:57658
+t=2023-01-30T17:17:22+0100 lvl=info msg="join connections" obj=join id=aad1ca87ad7b l=127.0.0.1:3000 r=134.96.198.159:57658
+t=2023-01-30T17:20:18+0100 lvl=info msg="join connections" obj=join id=23c1e8102453 l=127.0.0.1:8000 r=134.96.198.159:35440
+t=2023-01-30T17:20:19+0100 lvl=info msg="join connections" obj=join id=30a60e1cbe15 l=127.0.0.1:8000 r=134.96.198.159:35440
+t=2023-01-30T17:20:28+0100 lvl=info msg="join connections" obj=join id=4c871b568e42 l=127.0.0.1:3000 r=134.96.198.159:57658
+t=2023-01-30T17:20:39+0100 lvl=info msg="join connections" obj=join id=d7f3a53a3a48 l=127.0.0.1:3000 r=149.154.161.248:44086
+t=2023-01-30T17:21:01+0100 lvl=info msg="join connections" obj=join id=0ccf431187f0 l=127.0.0.1:8081 r=134.96.198.159:47888
+t=2023-01-30T17:21:11+0100 lvl=info msg="join connections" obj=join id=7faa24e69a94 l=127.0.0.1:8000 r=134.96.198.159:35440
+t=2023-01-30T17:27:26+0100 lvl=info msg="join connections" obj=join id=8fd01efc4ae8 l=127.0.0.1:8081 r=149.154.161.220:52118
+t=2023-01-30T17:27:51+0100 lvl=info msg="join connections" obj=join id=dc0b162eeb4c l=127.0.0.1:3000 r=134.96.198.159:46484
+t=2023-01-30T17:28:00+0100 lvl=info msg="join connections" obj=join id=03b44b6a7b1e l=127.0.0.1:3000 r=134.96.198.159:46484
+t=2023-01-30T17:28:07+0100 lvl=info msg="join connections" obj=join id=79485098413e l=127.0.0.1:3000 r=134.96.198.159:46484
+t=2023-01-30T17:28:13+0100 lvl=info msg="join connections" obj=join id=d8a551effb22 l=127.0.0.1:3000 r=134.96.198.159:46484
+t=2023-01-30T17:34:03+0100 lvl=info msg="join connections" obj=join id=392661f109c6 l=127.0.0.1:3000 r=134.96.198.159:40912
+t=2023-01-30T18:34:26+0100 lvl=info msg="Got quit command" obj=consoleui
+t=2023-01-30T18:34:26+0100 lvl=info msg="received stop request" obj=app stopReq="{err:<nil> restart:false}"
+t=2023-01-30T18:34:26+0100 lvl=info msg="session closing" obj=tunnels.session err=nil
+t=2023-01-30T18:34:29+0100 lvl=info msg="starting web service" obj=web addr=127.0.0.1:4040
+t=2023-01-30T18:34:30+0100 lvl=info msg="tunnel session started" obj=tunnels.session
+t=2023-01-30T18:34:30+0100 lvl=info msg="client session established" obj=csess id=9956b05bcd8a
+t=2023-01-30T18:34:30+0100 lvl=info msg="started tunnel" obj=tunnels name=visdom addr=http://localhost:8000 url=https://8d99-134-96-105-136.ngrok.io
+t=2023-01-30T18:34:30+0100 lvl=info msg="started tunnel" obj=tunnels name=tb addr=http://localhost:8081 url=https://6edd-134-96-105-136.ngrok.io
+t=2023-01-30T18:36:19+0100 lvl=info msg="Got quit command" obj=consoleui
+t=2023-01-30T18:36:19+0100 lvl=info msg="received stop request" obj=app stopReq="{err:<nil> restart:false}"
+t=2023-01-30T18:36:19+0100 lvl=info msg="session closing" obj=tunnels.session err=nil
+t=2023-01-30T18:36:19+0100 lvl=info msg="accept failed" obj=csess id=9956b05bcd8a err="reconnecting session closed"
+t=2023-01-30T18:36:22+0100 lvl=info msg="starting web service" obj=web addr=127.0.0.1:4040
+t=2023-01-30T18:36:23+0100 lvl=info msg="tunnel session started" obj=tunnels.session
+t=2023-01-30T18:36:23+0100 lvl=info msg="client session established" obj=csess id=6b340f61b049
+t=2023-01-30T18:36:23+0100 lvl=info msg="started tunnel" obj=tunnels name=visdom addr=http://localhost:8000 url=https://b5c5-134-96-105-136.ngrok.io
+t=2023-01-30T18:36:23+0100 lvl=info msg="started tunnel" obj=tunnels name=tb addr=http://localhost:8081 url=https://450e-134-96-105-136.ngrok.io
+t=2023-01-30T18:36:36+0100 lvl=info msg="Got quit command" obj=consoleui
+t=2023-01-30T18:36:36+0100 lvl=info msg="received stop request" obj=app stopReq="{err:<nil> restart:false}"
+t=2023-01-30T18:36:36+0100 lvl=info msg="session closing" obj=tunnels.session err=nil
+t=2023-01-30T18:36:39+0100 lvl=info msg="starting web service" obj=web addr=127.0.0.1:4040
+t=2023-01-30T18:36:39+0100 lvl=info msg="tunnel session started" obj=tunnels.session
+t=2023-01-30T18:36:39+0100 lvl=info msg="client session established" obj=csess id=92332ed49bc7
+t=2023-01-30T18:36:39+0100 lvl=info msg="started tunnel" obj=tunnels name=tb addr=http://localhost:8081 url=https://9500-134-96-105-136.ngrok.io
+t=2023-01-30T18:36:39+0100 lvl=info msg="started tunnel" obj=tunnels name=visdom addr=http://localhost:8000 url=https://1b3a-134-96-105-136.ngrok.io
+t=2023-01-30T18:36:39+0100 lvl=info msg="started tunnel" obj=tunnels name=note addr=http://localhost:3000 url=https://3387-134-96-105-136.ngrok.io
+t=2023-01-30T18:36:50+0100 lvl=info msg="join connections" obj=join id=97b2335d140d l=127.0.0.1:3000 r=134.96.198.159:33024
+t=2023-01-30T18:40:21+0100 lvl=info msg=start pg=/ id=a7dbf32622168d75
+t=2023-01-30T18:40:21+0100 lvl=info msg=end pg=/ id=a7dbf32622168d75 status=302 dur=229.098µs
+t=2023-01-30T18:40:21+0100 lvl=info msg=start pg=/inspect/http id=fe2aa8f568cf06cf
+t=2023-01-30T18:40:21+0100 lvl=info msg=end pg=/inspect/http id=fe2aa8f568cf06cf status=200 dur=413.455µs
+t=2023-01-30T18:40:22+0100 lvl=info msg=start pg=/static/compiled-css/vendor.c962e5007001e427374a.css id=6fc6e0ac88831282
+t=2023-01-30T18:40:22+0100 lvl=info msg=start pg=/static/compiled-css/app.abeefa2f1e7ed6a57390.css id=cdc53193060f1b78
+t=2023-01-30T18:40:22+0100 lvl=info msg=end pg=/static/compiled-css/app.abeefa2f1e7ed6a57390.css id=cdc53193060f1b78 status=200 dur=3.909565ms
+t=2023-01-30T18:40:22+0100 lvl=info msg=end pg=/static/compiled-css/vendor.c962e5007001e427374a.css id=6fc6e0ac88831282 status=200 dur=7.593305ms
+t=2023-01-30T18:40:25+0100 lvl=info msg=start pg=/static/js/vendor.7efe51701003466ba71c.js id=7873749dbd744b96
+t=2023-01-30T18:40:25+0100 lvl=info msg=start pg=/static/js/rpx.bb9505282104c4cc0917.js id=0157b7cf17962554
+t=2023-01-30T18:40:25+0100 lvl=info msg=start pg=/static/js/app.57e17b1c647cd71763bd.js id=90dae776684015af
+t=2023-01-30T18:40:25+0100 lvl=info msg=end pg=/static/js/rpx.bb9505282104c4cc0917.js id=0157b7cf17962554 status=200 dur=1.248132ms
+t=2023-01-30T18:40:25+0100 lvl=info msg=end pg=/static/js/app.57e17b1c647cd71763bd.js id=90dae776684015af status=200 dur=1.558547ms
+t=2023-01-30T18:40:25+0100 lvl=info msg=end pg=/static/js/vendor.7efe51701003466ba71c.js id=7873749dbd744b96 status=200 dur=30.973654ms
+t=2023-01-30T18:40:43+0100 lvl=info msg=start pg=/grpc/agent.Web/Preloaded id=bd2d6b8dd4cfe63d
+t=2023-01-30T18:40:43+0100 lvl=info msg=end pg=/grpc/agent.Web/Preloaded id=bd2d6b8dd4cfe63d status=200 dur=1.541006ms
+t=2023-01-30T18:40:43+0100 lvl=info msg=start pg=/grpc/agent.Web/State id=5aa7bb0550f85dd1
+t=2023-01-30T18:40:43+0100 lvl=info msg=start pg=/static/favicon.ico id=74ceb08f9924a89a
+t=2023-01-30T18:40:43+0100 lvl=info msg=end pg=/static/favicon.ico id=74ceb08f9924a89a status=200 dur=339.282µs

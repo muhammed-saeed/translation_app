@@ -1,9 +1,10 @@
 import axios from "axios";
+// require('dotenv').config()
 
 export const translateNote = async (note) => {
   console.log(note);
   const response = await axios.post(
-    "/pcm_en",
+    `${process.env.REACT_APP_API_2}/pcm_en`,
     {
       title: note.title,
       details: note.details,
@@ -21,7 +22,7 @@ export const translateNote = async (note) => {
 export const translateENtoPCM = async (note) => {
   console.log(note);
   const response = await axios.post(
-    "/enpcm",
+    `${process.env.REACT_APP_API_2}/enpcm`,
     {
       title: note.title,
       details: note.details,
@@ -38,8 +39,29 @@ export const translateENtoPCM = async (note) => {
 export const discourse_classification = async (note) => {
   console.log(note);
   const response = await axios.post(
-    // "https://127.0.0.1:58884/api/parser",
-    "http://127.0.0.1:8081/api/parser",
+    // "/api/parser",
+    `${process.env.REACT_APP_API_1}/api/parseren/`,
+    // "https://localhost:8080/discourseClassifier",
+    {
+      title: note.title,
+      details: note.details,
+      cateogry: note.cateogry,
+    },
+    {
+      headers: {
+        "Content-Type": "application/json",
+      },
+    }
+  );
+  if (response.status === 200) return response.data;
+};
+
+
+export const discourse_classificationEN = async (note) => {
+  console.log(note);
+  const response = await axios.post(
+    // "/api/parser",
+    `${process.env.REACT_APP_API_1}/api/parseren/`,
     // "https://localhost:8080/discourseClassifier",
     {
       title: note.title,

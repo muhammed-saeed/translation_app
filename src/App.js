@@ -7,9 +7,11 @@ import Layout from "./components/Layout";
 import { NoteFormProvider } from "./context/notes.context";
 import {NoteFormProviderENPCM} from "./context/enpcm.context"
 import { NoteFormProviderDiscourseClassifier } from "./context/discourse_classifier.context";
+import { NoteFormProviderDiscourseClassifierEN } from "./context/discourse_classifierEN.context";
 import CreateNote from "./pages/CreateNote";
 import ENtoPCM from "./pages/ENtoPCM";
 import DiscourseClassifier from"./pages/discourse_classifier"
+import DiscourseClassifierEN from "./pages/discourse_classifierEN";
 
 
 const theme = createMuiTheme({
@@ -37,7 +39,7 @@ function App() {
             <Route exact path="/">
               <Notes />
             </Route>
-            <Route path="/create">
+            <Route path="/pcmen">
               <NoteFormProvider>
                 <CreateNote />
               </NoteFormProvider>
@@ -51,6 +53,12 @@ function App() {
               <NoteFormProviderDiscourseClassifier>
                 <DiscourseClassifier />
               </NoteFormProviderDiscourseClassifier>
+            </Route>
+
+            <Route path="/discourse_classifier_en">
+              <NoteFormProviderDiscourseClassifierEN>
+                <DiscourseClassifierEN />
+              </NoteFormProviderDiscourseClassifierEN>
             </Route>
           </Switch>
         </Layout>
