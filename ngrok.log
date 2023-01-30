@@ -85,3 +85,115 @@ t=2023-01-30T18:40:43+0100 lvl=info msg=end pg=/grpc/agent.Web/Preloaded id=bd2d
 t=2023-01-30T18:40:43+0100 lvl=info msg=start pg=/grpc/agent.Web/State id=5aa7bb0550f85dd1
 t=2023-01-30T18:40:43+0100 lvl=info msg=start pg=/static/favicon.ico id=74ceb08f9924a89a
 t=2023-01-30T18:40:43+0100 lvl=info msg=end pg=/static/favicon.ico id=74ceb08f9924a89a status=200 dur=339.282µs
+t=2023-01-30T18:46:41+0100 lvl=info msg=end pg=/grpc/agent.Web/State id=5aa7bb0550f85dd1 status=200 dur=5m57.516160843s
+t=2023-01-30T18:51:42+0100 lvl=info msg="Got quit command" obj=consoleui
+t=2023-01-30T18:51:42+0100 lvl=info msg="received stop request" obj=app stopReq="{err:<nil> restart:false}"
+t=2023-01-30T18:51:42+0100 lvl=info msg="session closing" obj=tunnels.session err=nil
+t=2023-01-30T18:51:59+0100 lvl=info msg="starting web service" obj=web addr=127.0.0.1:4040
+t=2023-01-30T18:51:59+0100 lvl=info msg="tunnel session started" obj=tunnels.session
+t=2023-01-30T18:51:59+0100 lvl=info msg="client session established" obj=csess id=da7e85e86703
+t=2023-01-30T18:51:59+0100 lvl=info msg="started tunnel" obj=tunnels name=tb addr=http://localhost:8081 url=https://5445-134-96-105-136.ngrok.io
+t=2023-01-30T18:51:59+0100 lvl=info msg="started tunnel" obj=tunnels name=visdom addr=http://localhost:8000 url=https://3433-134-96-105-136.ngrok.io
+t=2023-01-30T18:51:59+0100 lvl=info msg="started tunnel" obj=tunnels name=note addr=http://localhost:3000 url=https://0e42-134-96-105-136.ngrok.io
+t=2023-01-30T18:53:14+0100 lvl=warn msg="failed to open private leg" id=c031810e7f55 privaddr=localhost:3000 err="dial tcp 127.0.0.1:3000: connect: connection refused"
+t=2023-01-30T18:53:15+0100 lvl=warn msg="failed to open private leg" id=5090cc07de59 privaddr=localhost:3000 err="dial tcp 127.0.0.1:3000: connect: connection refused"
+t=2023-01-30T18:53:51+0100 lvl=info msg="join connections" obj=join id=9c3bb4e53c08 l=127.0.0.1:8000 r=134.96.198.159:42856
+t=2023-01-30T18:53:52+0100 lvl=info msg="join connections" obj=join id=ff898457432e l=127.0.0.1:8000 r=134.96.198.159:42856
+t=2023-01-30T18:54:13+0100 lvl=info msg="join connections" obj=join id=8cdb37c4dd48 l=127.0.0.1:8081 r=134.96.198.159:60542
+t=2023-01-30T18:55:30+0100 lvl=info msg="join connections" obj=join id=91d3e85d3dd0 l=127.0.0.1:3000 r=134.96.198.159:44486
+t=2023-01-30T18:56:35+0100 lvl=info msg="join connections" obj=join id=4d3a44a3fffa l=127.0.0.1:8081 r=134.96.198.172:61610
+t=2023-01-30T18:57:12+0100 lvl=info msg="join connections" obj=join id=c3a13f371c33 l=127.0.0.1:8081 r=134.96.198.159:59896
+t=2023-01-30T18:57:42+0100 lvl=info msg="join connections" obj=join id=5f6ee7644866 l=127.0.0.1:8000 r=134.96.198.159:57606
+t=2023-01-30T18:57:42+0100 lvl=info msg="join connections" obj=join id=b1e3f0450e6b l=127.0.0.1:8000 r=134.96.198.159:57606
+t=2023-01-30T18:58:02+0100 lvl=info msg="join connections" obj=join id=cdbb96683161 l=127.0.0.1:3000 r=134.96.198.159:44486
+t=2023-01-30T18:58:14+0100 lvl=info msg="join connections" obj=join id=dfa75ec6203e l=127.0.0.1:3000 r=149.154.161.219:35364
+t=2023-01-30T18:58:34+0100 lvl=info msg="join connections" obj=join id=7fdf05c0279e l=127.0.0.1:3000 r=134.96.198.172:55728
+t=2023-01-30T18:58:47+0100 lvl=info msg="join connections" obj=join id=d67d7a1e472c l=127.0.0.1:3000 r=134.96.198.172:55728
+t=2023-01-30T18:58:51+0100 lvl=info msg="join connections" obj=join id=08cf49301e50 l=127.0.0.1:3000 r=[2a02:3102:5a1e:37:68f5:3e63:113:746d]:37396
+t=2023-01-30T18:59:06+0100 lvl=info msg="join connections" obj=join id=675fe859fc0c l=127.0.0.1:3000 r=134.96.198.172:55728
+t=2023-01-30T19:00:53+0100 lvl=info msg="join connections" obj=join id=21d052b82c2f l=127.0.0.1:3000 r=134.96.198.172:55728
+t=2023-01-30T19:01:10+0100 lvl=info msg="join connections" obj=join id=87f45f56a8c6 l=127.0.0.1:3000 r=134.96.198.172:55728
+t=2023-01-30T19:01:32+0100 lvl=info msg="join connections" obj=join id=d53b027854d3 l=127.0.0.1:3000 r=134.96.198.172:55728
+t=2023-01-30T19:01:44+0100 lvl=info msg="join connections" obj=join id=673f217bead5 l=127.0.0.1:3000 r=134.96.198.172:55728
+t=2023-01-30T19:02:05+0100 lvl=info msg="join connections" obj=join id=3980a9fe8623 l=127.0.0.1:8000 r=134.96.198.172:56034
+t=2023-01-30T19:02:06+0100 lvl=info msg="join connections" obj=join id=f2d8d04c8366 l=127.0.0.1:8000 r=134.96.198.172:56034
+t=2023-01-30T19:02:19+0100 lvl=info msg="join connections" obj=join id=d21a79041183 l=127.0.0.1:3000 r=134.96.198.172:55728
+t=2023-01-30T19:03:30+0100 lvl=info msg="Got quit command" obj=consoleui
+t=2023-01-30T19:03:30+0100 lvl=info msg="received stop request" obj=app stopReq="{err:<nil> restart:false}"
+t=2023-01-30T19:03:30+0100 lvl=info msg="session closing" obj=tunnels.session err=nil
+t=2023-01-30T19:03:43+0100 lvl=info msg="starting web service" obj=web addr=127.0.0.1:4040
+t=2023-01-30T19:03:43+0100 lvl=info msg="tunnel session started" obj=tunnels.session
+t=2023-01-30T19:03:43+0100 lvl=info msg="client session established" obj=csess id=944b2390be72
+t=2023-01-30T19:03:43+0100 lvl=info msg="started tunnel" obj=tunnels name=note addr=http://localhost:3000 url=https://0d33-134-96-105-136.ngrok.io
+t=2023-01-30T19:03:43+0100 lvl=info msg="started tunnel" obj=tunnels name=visdom addr=http://localhost:8000 url=https://8339-134-96-105-136.ngrok.io
+t=2023-01-30T19:03:43+0100 lvl=eror msg="session closing" obj=tunnels.session err="Your account may not run more than 3 tunnels over a single ngrok agent session.\nThe tunnels already running on this session are:\ntn_2L3ZepzF1yqffGF3EWUypv5GJye, tn_2L3Zeq22TS6XDSHXReOp6eUMSPf, tn_2L3ZeqwrmCxvUwX4TVxF9mZvC2D\n\r\n\r\nERR_NGROK_324\r\n"
+t=2023-01-30T19:03:43+0100 lvl=info msg="started tunnel" obj=tunnels name=other addr=http://localhost:6969 url=https://e568-134-96-105-136.ngrok.io
+t=2023-01-30T19:03:43+0100 lvl=info msg="accept failed" obj=csess id=944b2390be72 err="reconnecting session closed"
+t=2023-01-30T19:03:43+0100 lvl=info msg="received stop request" obj=app stopReq="{err:0xc000540420 restart:false}"
+t=2023-01-30T19:03:43+0100 lvl=eror msg="terminating with error" obj=app err="Your account may not run more than 3 tunnels over a single ngrok agent session.\nThe tunnels already running on this session are:\ntn_2L3ZepzF1yqffGF3EWUypv5GJye, tn_2L3Zeq22TS6XDSHXReOp6eUMSPf, tn_2L3ZeqwrmCxvUwX4TVxF9mZvC2D\n\r\n\r\nERR_NGROK_324\r\n"
+t=2023-01-30T19:03:43+0100 lvl=crit msg="command failed" err="Your account may not run more than 3 tunnels over a single ngrok agent session.\nThe tunnels already running on this session are:\ntn_2L3ZepzF1yqffGF3EWUypv5GJye, tn_2L3Zeq22TS6XDSHXReOp6eUMSPf, tn_2L3ZeqwrmCxvUwX4TVxF9mZvC2D\n\r\n\r\nERR_NGROK_324\r\n"
+t=2023-01-30T19:04:11+0100 lvl=info msg="starting web service" obj=web addr=127.0.0.1:4040
+t=2023-01-30T19:04:11+0100 lvl=info msg="tunnel session started" obj=tunnels.session
+t=2023-01-30T19:04:11+0100 lvl=info msg="client session established" obj=csess id=b93aca2d1a51
+t=2023-01-30T19:04:11+0100 lvl=info msg="started tunnel" obj=tunnels name=tb addr=http://localhost:8081 url=https://3d8e-134-96-105-136.ngrok.io
+t=2023-01-30T19:04:11+0100 lvl=info msg="started tunnel" obj=tunnels name=note addr=http://localhost:4000 url=https://84cf-134-96-105-136.ngrok.io
+t=2023-01-30T19:04:11+0100 lvl=info msg="started tunnel" obj=tunnels name=visdom addr=http://localhost:8000 url=https://5f55-134-96-105-136.ngrok.io
+t=2023-01-30T19:09:49+0100 lvl=info msg="Got quit command" obj=consoleui
+t=2023-01-30T19:09:49+0100 lvl=info msg="received stop request" obj=app stopReq="{err:<nil> restart:false}"
+t=2023-01-30T19:09:49+0100 lvl=info msg="session closing" obj=tunnels.session err=nil
+t=2023-01-30T19:10:12+0100 lvl=info msg="starting web service" obj=web addr=127.0.0.1:4040
+t=2023-01-30T19:10:13+0100 lvl=info msg="tunnel session started" obj=tunnels.session
+t=2023-01-30T19:10:13+0100 lvl=info msg="client session established" obj=csess id=3f8a26718cbf
+t=2023-01-30T19:10:13+0100 lvl=info msg="started tunnel" obj=tunnels name=tb addr=http://localhost:8081 url=https://2419-134-96-105-136.ngrok.io
+t=2023-01-30T19:10:13+0100 lvl=info msg="started tunnel" obj=tunnels name=visdom addr=http://localhost:8000 url=https://c9d1-134-96-105-136.ngrok.io
+t=2023-01-30T19:10:13+0100 lvl=info msg="started tunnel" obj=tunnels name=reactApp addr=http://localhost:3000 url=https://75e0-134-96-105-136.ngrok.io
+t=2023-01-30T19:14:41+0100 lvl=info msg="join connections" obj=join id=0ee9e730aef0 l=127.0.0.1:8081 r=134.96.198.159:38778
+t=2023-01-30T19:14:46+0100 lvl=info msg="join connections" obj=join id=aa1ca3275f86 l=127.0.0.1:8000 r=134.96.198.159:59600
+t=2023-01-30T19:14:47+0100 lvl=info msg="join connections" obj=join id=e9f0c27cfb9e l=127.0.0.1:8000 r=134.96.198.159:59600
+t=2023-01-30T19:18:52+0100 lvl=info msg="join connections" obj=join id=c690c7b0cc9e l=127.0.0.1:8081 r=134.96.198.159:38778
+t=2023-01-30T20:14:58+0100 lvl=info msg="join connections" obj=join id=3f229fb69181 l=127.0.0.1:8081 r=134.96.199.4:58550
+t=2023-01-30T20:15:18+0100 lvl=info msg="join connections" obj=join id=465af2c68079 l=127.0.0.1:3000 r=134.96.199.4:58577
+t=2023-01-30T20:15:34+0100 lvl=info msg="join connections" obj=join id=4fb12cb5662a l=127.0.0.1:3000 r=134.96.199.4:58577
+t=2023-01-30T20:20:37+0100 lvl=info msg="Got quit command" obj=consoleui
+t=2023-01-30T20:20:37+0100 lvl=info msg="received stop request" obj=app stopReq="{err:<nil> restart:false}"
+t=2023-01-30T20:20:37+0100 lvl=info msg="session closing" obj=tunnels.session err=nil
+t=2023-01-30T20:20:40+0100 lvl=info msg="starting web service" obj=web addr=127.0.0.1:4040
+t=2023-01-30T20:20:40+0100 lvl=info msg="tunnel session started" obj=tunnels.session
+t=2023-01-30T20:20:40+0100 lvl=info msg="client session established" obj=csess id=f7842b66597d
+t=2023-01-30T20:20:40+0100 lvl=info msg="started tunnel" obj=tunnels name=reactApp addr=http://localhost:3000 url=https://bdeb-134-96-105-136.ngrok.io
+t=2023-01-30T20:20:40+0100 lvl=info msg="started tunnel" obj=tunnels name=tb addr=http://localhost:8081 url=https://5e98-134-96-105-136.ngrok.io
+t=2023-01-30T20:20:40+0100 lvl=info msg="started tunnel" obj=tunnels name=visdom addr=http://localhost:8000 url=https://b01a-134-96-105-136.ngrok.io
+t=2023-01-30T20:21:48+0100 lvl=info msg="Got quit command" obj=consoleui
+t=2023-01-30T20:21:48+0100 lvl=info msg="received stop request" obj=app stopReq="{err:<nil> restart:false}"
+t=2023-01-30T20:21:48+0100 lvl=info msg="session closing" obj=tunnels.session err=nil
+t=2023-01-30T20:21:50+0100 lvl=info msg="starting web service" obj=web addr=127.0.0.1:4040
+t=2023-01-30T20:21:50+0100 lvl=info msg="tunnel session started" obj=tunnels.session
+t=2023-01-30T20:21:50+0100 lvl=info msg="client session established" obj=csess id=1c9e3f71c5f8
+t=2023-01-30T20:21:50+0100 lvl=info msg="started tunnel" obj=tunnels name=tb addr=http://localhost:8081 url=https://daee-134-96-105-136.ngrok.io
+t=2023-01-30T20:21:50+0100 lvl=info msg="started tunnel" obj=tunnels name=visdom addr=http://localhost:8000 url=https://fb67-134-96-105-136.ngrok.io
+t=2023-01-30T20:21:50+0100 lvl=info msg="started tunnel" obj=tunnels name=reactApp addr=http://localhost:3000 url=https://8d5f-134-96-105-136.ngrok.io
+t=2023-01-30T20:22:33+0100 lvl=info msg="join connections" obj=join id=0e21f6dd7898 l=127.0.0.1:3000 r=134.96.199.4:65041
+t=2023-01-30T20:27:52+0100 lvl=info msg="join connections" obj=join id=111b95160dea l=127.0.0.1:8081 r=134.96.199.63:53618
+t=2023-01-30T20:28:21+0100 lvl=info msg="join connections" obj=join id=069768ca4caa l=127.0.0.1:8000 r=134.96.199.63:48054
+t=2023-01-30T20:28:21+0100 lvl=info msg="join connections" obj=join id=62ae68a03b2c l=127.0.0.1:8000 r=134.96.199.63:48054
+t=2023-01-30T20:28:56+0100 lvl=info msg="join connections" obj=join id=45a58ec2297e l=127.0.0.1:3000 r=134.96.199.63:53264
+t=2023-01-30T20:28:56+0100 lvl=info msg="join connections" obj=join id=ca5dc92a120a l=127.0.0.1:3000 r=134.96.199.63:53264
+t=2023-01-30T20:28:56+0100 lvl=info msg="join connections" obj=join id=321214362250 l=127.0.0.1:3000 r=134.96.199.63:53264
+t=2023-01-30T20:29:22+0100 lvl=info msg="join connections" obj=join id=c9777d0f0d04 l=127.0.0.1:3000 r=149.154.161.233:56574
+t=2023-01-30T20:29:22+0100 lvl=info msg="join connections" obj=join id=b6d78d9627b4 l=127.0.0.1:3000 r=134.96.199.63:53264
+t=2023-01-30T20:29:22+0100 lvl=info msg="join connections" obj=join id=f5d8cb5361d5 l=127.0.0.1:3000 r=134.96.199.63:53264
+t=2023-01-30T20:29:23+0100 lvl=info msg="join connections" obj=join id=31aac038e459 l=127.0.0.1:3000 r=134.96.199.63:36852
+t=2023-01-30T20:29:29+0100 lvl=info msg="join connections" obj=join id=745e249b6f33 l=127.0.0.1:3000 r=134.96.199.4:65428
+t=2023-01-30T20:29:30+0100 lvl=info msg="join connections" obj=join id=d215234745fd l=127.0.0.1:3000 r=134.96.199.4:65428
+t=2023-01-30T20:29:30+0100 lvl=info msg="join connections" obj=join id=cf1fe3fa63ec l=127.0.0.1:3000 r=134.96.199.4:65428
+t=2023-01-30T20:29:34+0100 lvl=info msg="join connections" obj=join id=18d2c4ee5f26 l=127.0.0.1:8081 r=134.96.199.63:57086
+t=2023-01-30T20:29:35+0100 lvl=info msg="join connections" obj=join id=990772b9c77e l=127.0.0.1:3000 r=134.96.199.4:65438
+t=2023-01-30T20:29:35+0100 lvl=info msg="join connections" obj=join id=43372fad4d8b l=127.0.0.1:3000 r=134.96.199.4:65428
+t=2023-01-30T20:29:35+0100 lvl=info msg="join connections" obj=join id=5524878f9bc1 l=127.0.0.1:3000 r=134.96.199.4:65428
+t=2023-01-30T20:29:46+0100 lvl=info msg="join connections" obj=join id=a60bef30e779 l=127.0.0.1:3000 r=[2a02:3102:5a1e:37:68f5:3e63:113:746d]:49948
+t=2023-01-30T20:29:46+0100 lvl=info msg="join connections" obj=join id=820a53996608 l=127.0.0.1:3000 r=[2a02:3102:5a1e:37:68f5:3e63:113:746d]:49948
+t=2023-01-30T20:29:46+0100 lvl=info msg="join connections" obj=join id=10a9ea89475b l=127.0.0.1:3000 r=[2a02:3102:5a1e:37:68f5:3e63:113:746d]:49948
+t=2023-01-30T20:29:48+0100 lvl=info msg="join connections" obj=join id=731ca458cf60 l=127.0.0.1:3000 r=[2a02:3102:5a1e:37:68f5:3e63:113:746d]:49972
+t=2023-01-30T20:29:59+0100 lvl=info msg="join connections" obj=join id=397d8a281664 l=127.0.0.1:8000 r=[2a02:3102:5a1e:37:68f5:3e63:113:746d]:49980
+t=2023-01-30T20:30:00+0100 lvl=info msg="join connections" obj=join id=9bc72a0b0574 l=127.0.0.1:8000 r=[2a02:3102:5a1e:37:68f5:3e63:113:746d]:49980
+t=2023-01-30T20:30:10+0100 lvl=info msg="join connections" obj=join id=2e0551d536d5 l=127.0.0.1:8081 r=[2a02:3102:5a1e:37:68f5:3e63:113:746d]:38198
