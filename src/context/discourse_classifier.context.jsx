@@ -5,7 +5,7 @@ const NoteFormContext = createContext({});
 
 export const NoteFormProviderDiscourseClassifier = ({ children }) => {
   const [note, setNote] = useState({
-    title: {},
+    title: "wait the parse output will appear here",
     details: "",
     category: "money",
   });

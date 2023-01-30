@@ -52,7 +52,7 @@ const DiscourseClassifier = () => {
           variant="outlined"
           color="secondary"
           multiline
-          rows={4}
+          rows={6}
           fullWidth
           required
           value={note.details}
@@ -67,7 +67,7 @@ const DiscourseClassifier = () => {
           color="secondary"
           fullWidth
           multiline
-          rows={4}
+          rows={8}
           value={note.title}
          
         />

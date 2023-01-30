@@ -18,7 +18,6 @@ export const translateNote = async (note) => {
   if (response.status === 200) return response.data;
 };
 
-
 export const translateENtoPCM = async (note) => {
   console.log(note);
   const response = await axios.post(
@@ -39,7 +38,8 @@ export const translateENtoPCM = async (note) => {
 export const discourse_classification = async (note) => {
   console.log(note);
   const response = await axios.post(
-    "http://127.0.0.1:8080/api/parser",
+    // "https://127.0.0.1:58884/api/parser",
+    "http://127.0.0.1:8081/api/parser",
     // "https://localhost:8080/discourseClassifier",
     {
       title: note.title,
