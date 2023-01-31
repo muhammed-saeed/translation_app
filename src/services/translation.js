@@ -40,7 +40,7 @@ export const discourse_classification = async (note) => {
   console.log(note);
   const response = await axios.post(
     // "/api/parser",
-    `${process.env.REACT_APP_API_1}/api/parseren/`,
+    `${process.env.REACT_APP_API_1}/api/parser/`,
     // "https://localhost:8080/discourseClassifier",
     {
       title: note.title,

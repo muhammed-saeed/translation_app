@@ -57,11 +57,11 @@ export default function Layout({ children }) {
   const location = useLocation();
 
   const menuItems = [
-    {
-      text: "My Notes",
-      icon: <SubjectOutlined color="secondary" />,
-      path: "/",
-    },
+    // {
+    //   text: "My Notes",
+    //   icon: <SubjectOutlined color="secondary" />,
+    //   path: "/",
+    // },
     {
       text: "PCM to EN Translation",
       icon: <AddCircleOutlineOutlined color="secondary" />,
@@ -73,13 +73,13 @@ export default function Layout({ children }) {
       path: "/enpcm",
     },
     {
-      text: "PCM relation classifier",
+      text: "PCM Parser",
       icon: <AddCircleOutlineOutlined color="secondary" />,
 
       path: "discourse_classifier",
     },
     {
-      text: "En relation classifier",
+      text: "En Parser",
       icon: <AddCircleOutlineOutlined color="secondary" />,
 
       path: "discourse_classifier_en",
@@ -97,7 +97,8 @@ export default function Layout({ children }) {
       >
         <Toolbar>
           <Typography className={classes.date}>
-            Today is the {format(new Date(), "do MMMM Y")}
+            {/* Today is the {format(new Date(), "do MMMM Y") */}
+            
           </Typography>
           <Typography>Naija</Typography>
           <Avatar className={classes.avatar} src="/pidgin.png" />

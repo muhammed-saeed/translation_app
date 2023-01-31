@@ -37,7 +37,9 @@ function App() {
         <Layout>
           <Switch>
             <Route exact path="/">
-              <Notes />
+            <NoteFormProvider>
+                <CreateNote />
+              </NoteFormProvider>
             </Route>
             <Route path="/pcmen">
               <NoteFormProvider>
