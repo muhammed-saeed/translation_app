@@ -107,12 +107,12 @@ def tokenize(text, fast = True, tokenize_only = False):
     from discopy_data.data.loaders.raw import load_texts
     output = []
     arr2text = ". ".join(text)
-    print(f"the input text to the tokenize is {text}",file = sys.stderr)
+    # print(f"the input text to the tokenize is {text}",file = sys.stderr)
     
     document_loader = load_texts_fast # if fast else load_texts
     for doc in document_loader(re.split(r'\n\n\n+', text), parserForLoadText, tokenize_only=tokenize_only):
         output.append(doc)
-    print(f'the tokenized text is {output[0].to_json()} ', file=sys.stderr)
+    # print(f'the tokenized text is {output[0].to_json()} ', file=sys.stderr)
     return output
 
 def add_parsers(src, 
@@ -128,7 +128,7 @@ def add_parsers(src,
     sys.stderr.write('SUPAR load dependency parser!\n')
     dparser = supar.Parser.load(dependency_parser) if dependencies else None
     output = []
-    print(f"the input to the add_parses is {src[0].to_json()}", file = sys.stderr)
+    # print(f"the input to the add_parses is {src[0].to_json()}", file = sys.stderr)
     for doc in src:
         for sent_i, sent in enumerate(doc.sentences):
             inputs = [(t.surface, t.upos) for t in sent.tokens]
@@ -140,7 +140,7 @@ def add_parsers(src,
                 doc.sentences[sent_i].dependencies = dependencies
         output.append(doc)
     sys.stderr.write('Supar parsing done!\n')
-    print(f"the output to the add_parses is {output[0].to_json()}", file = sys.stderr)
+    # print(f"the output to the add_parses is {output[0].to_json()}", file = sys.stderr)
     return output
 
 
@@ -162,7 +162,8 @@ def apply_parser(r: ParserRequest):
     pcmTEXT = r.details
     text_array = pcmTEXT.split(".")
     text_array = list(filter(lambda x: x.strip(), text_array))
-
+    for i, string in enumerate(text_array):
+        text_array[i] = string.lstrip().capitalize()
     sentences = [ "translate pcm to english: " +r for r in text_array]
     print(f"{sentences}", file=sys.stderr)
     text_ = model.predict(sentences)
@@ -207,6 +208,10 @@ def apply_parser(r: ParserRequest):
     enTEXT = r.details
     text_array = enTEXT.split(".")
     text_array = list(filter(lambda x: x.strip(), text_array))
+    for i, string in enumerate(text_array):
+
+        text_array[i] = string.lstrip().capitalize()
+        print(text_array[i])
     translation = ". ".join(text_array) + "."
     print(f"The english text to be processes is {translation}")
     doc = add_parsers(tokenize(str(translation)))[0]

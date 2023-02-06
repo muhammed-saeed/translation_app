@@ -711,3 +711,17 @@ t=2023-02-06T12:36:20+0100 lvl=info msg="join connections" obj=join id=a378a7876
 t=2023-02-06T12:36:20+0100 lvl=info msg="join connections" obj=join id=8661bf07b13f l=127.0.0.1:3000 r=134.96.104.203:41904
 t=2023-02-06T12:36:20+0100 lvl=info msg="join connections" obj=join id=2a8945717d03 l=127.0.0.1:3000 r=134.96.104.203:41904
 t=2023-02-06T12:36:21+0100 lvl=info msg="join connections" obj=join id=f57150feb5bc l=127.0.0.1:3000 r=134.96.104.203:41906
+t=2023-02-06T12:44:47+0100 lvl=info msg="join connections" obj=join id=7390e7400f28 l=127.0.0.1:8081 r=134.96.104.203:56550
+t=2023-02-06T12:45:58+0100 lvl=info msg="join connections" obj=join id=6741a3b49762 l=127.0.0.1:3000 r=134.96.204.22:38942
+t=2023-02-06T12:45:59+0100 lvl=info msg="join connections" obj=join id=4559e9ba01fd l=127.0.0.1:3000 r=134.96.204.22:38942
+t=2023-02-06T12:45:59+0100 lvl=info msg="join connections" obj=join id=85c520b58173 l=127.0.0.1:3000 r=134.96.204.22:38942
+t=2023-02-06T12:46:03+0100 lvl=info msg="join connections" obj=join id=dc01f114f2d7 l=127.0.0.1:3000 r=134.96.204.22:38998
+t=2023-02-06T12:47:26+0100 lvl=info msg="join connections" obj=join id=66f5c2ca6fb7 l=127.0.0.1:8081 r=134.96.104.203:56550
+t=2023-02-06T12:48:35+0100 lvl=info msg="join connections" obj=join id=3bea59a8da9f l=127.0.0.1:8081 r=134.96.204.22:48292
+t=2023-02-06T12:51:04+0100 lvl=info msg="join connections" obj=join id=b2dd9ca48b71 l=127.0.0.1:8081 r=134.96.204.22:48292
+t=2023-02-06T12:54:09+0100 lvl=info msg="join connections" obj=join id=73752aaa642d l=127.0.0.1:8081 r=134.96.204.22:48342
+t=2023-02-06T12:57:48+0100 lvl=info msg="join connections" obj=join id=d5cdd5c002bb l=127.0.0.1:8081 r=134.96.204.22:48450
+t=2023-02-06T13:00:10+0100 lvl=info msg="join connections" obj=join id=72003823f0b4 l=127.0.0.1:8081 r=134.96.104.203:60590
+t=2023-02-06T13:03:47+0100 lvl=info msg="join connections" obj=join id=24488052146f l=127.0.0.1:8081 r=134.96.204.22:42538
+t=2023-02-06T13:06:00+0100 lvl=info msg="join connections" obj=join id=8cb23791e988 l=127.0.0.1:8081 r=134.96.104.203:44472
+t=2023-02-06T14:12:27+0100 lvl=info msg="join connections" obj=join id=bd298d88c357 l=127.0.0.1:8081 r=134.96.104.203:53130
