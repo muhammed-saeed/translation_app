@@ -102,7 +102,7 @@ def my_form_post_en_pcm():
     print(sentence)
     text_ = model.predict(sentence)
     print(text_)
-    translation = " ".join(text_)+"."
+    translation = ". ".join(text_)+"."
     # machine_translated = en2pcm.translate(text)
     # machine_translated = text_[0]
     machine_translated= translation
